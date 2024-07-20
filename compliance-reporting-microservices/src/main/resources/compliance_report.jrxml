@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="compliance_report" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="d5b72c1c-437c-4ff8-a45a-6a9ed7f3d81b">
+
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="ReportTitle" class="java.lang.String"/>
+
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    
+    <field name="deviceId" class="java.lang.String"/>
+    <field name="settings" class="java.lang.String"/>
+
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="30" uuid="b3997a9e-8211-42b1-bb75-fd8dc6e2d5d2"/>
+                <textElement textAlignment="Center">
+                    <font size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Compliance Report]]></text>
+            </staticText>
+        </band>
+    </title>
+    
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="200" height="30" uuid="6f8d7372-418e-4372-a896-e963c14215bc"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Device ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="0" width="315" height="30" uuid="e036f7a0-5027-43f6-b8c4-f8a82b5dd5d5"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Settings]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    
+    <detail>
+        <band height="30">
+            <textField>
+                <reportElement x="0" y="0" width="200" height="30" uuid="65d5a76d-0c8e-4f78-97db-0a7e1738e0df"/>
+                <textFieldExpression><![CDATA[$F{deviceId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="200" y="0" width="315" height="30" uuid="bf0a80e3-9604-43b2-a92a-304a8b1e4cdd"/>
+                <textFieldExpression><![CDATA[$F{settings}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    
+    <columnFooter>
+        <band height="50">
+            <line>
+                <reportElement x="0" y="0" width="515" height="1" uuid="b45c1659-7b7f-4b56-8a61-e0755b290aba"/>
+            </line>
+        </band>
+    </columnFooter>
+    
+    <pageFooter>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="30" uuid="7b6d4e9b-d96d-4f2e-9f37-67e31b104569"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[End of Report]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+</jasperReport>
